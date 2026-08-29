@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta-title">Nelson Figueiredo — Engenheiro de Software & Dados</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta-desc" content="Nelson Ernesto Figueiredo — Engenheiro de Software e Dados. Backend com TypeScript/NestJS, pipelines de dados, a construir para banca e seguros.">
+<meta property="og:title" content="Nelson Figueiredo — Software & Data Engineer">
+<meta property="og:description" content="Engenheiro de Software e Dados. Backend com TypeScript/NestJS, pipelines de dados, a construir para banca e seguros.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <a href="#top" class="nav__mark" aria-label="Nelson Figueiredo — início">
+    <span class="nav__mark-grid" aria-hidden="true">
+      <i></i><i></i><i></i><i></i>
+    </span>
+    NF
+  </a>
+  <nav class="nav__links">
+    <a href="#sobre" data-i18n="nav-about">Sobre</a>
+    <a href="#competencias" data-i18n="nav-skills">Competências</a>
+    <a href="#projectos" data-i18n="nav-projects">Projectos</a>
+    <a href="#roteiro" data-i18n="nav-roadmap">Roteiro</a>
+    <a href="#contacto" class="nav__cta" data-i18n="nav-contact">Contacto</a>
+  </nav>
+  <div class="lang-switch" role="group" aria-label="Idioma / Language">
+    <button type="button" class="lang-switch__btn is-active" data-lang="pt" aria-pressed="true">PT</button>
+    <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+  <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__inner">
+    <p class="eyebrow" data-i18n="hero-eyebrow">SOFTWARE &amp; DATA ENGINEER · LUANDA, ANGOLA</p>
+    <h1 class="hero__title">Nelson<br>Figueiredo</h1>
+    <p class="hero__tagline" data-i18n="hero-tagline">Ordem. Precisão. Estrutura.</p>
+    <p class="hero__lede" data-i18n="hero-lede">
+      Construo serviços de backend e pipelines de dados com o mesmo rigor com que se lê um esquema: peça a peça, sem deixar nada ao acaso. Hoje isso é Python, NestJS e PostgreSQL/SQLServer. Amanhã, quero que sejam os sistemas que sustentam bancos e seguradoras
+    </p>
+    <div class="hero__actions">
+      <a href="#roteiro" class="btn btn--primary" data-i18n="hero-btn-primary">Ver roteiro para banca &amp; seguros</a>
+      <a href="#contacto" class="btn btn--ghost" data-i18n="hero-btn-ghost">Contactar</a>
+    </div>
+    <div class="hero__social">
+      <a href="https://github.com/nelsonmatenda" target="_blank" rel="noopener">GitHub ↗</a>
+      <span class="dot">·</span>
+      <a href="https://www.linkedin.com/in/nelsonmatenda/" target="_blank" rel="noopener">Linkedin ↗</a>
+      <span class="dot">·</span>
+      <a href="mailto:matendafigueiredo@hotmail.com">Email ↗</a>
+      <span class="dot">·</span>
+      <a href="tel:+244935570341">+244 935 570 341</a>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="section" id="sobre">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-i18n="about-eyebrow">01 — Sobre</p>
+      <div class="about">
+        <p class="about__lead" data-i18n-html="about-lead">
+          Sou desenvolvedor de software e estudante na <strong>42 Luanda</strong>, com experiência a
+          construir serviços de backend em TypeScript, NestJS, PostgreSQL e Docker.
+        </p>
+        <p data-i18n-html="about-body">
+          O meu foco actual de carreira é <strong>Engenharia de Dados</strong>: aprender a desenhar
+          pipelines escaláveis, modelar dados com cuidado e construir aplicações orientadas por dados.
+          Interesso-me também por infra-estrutura em nuvem, sistemas distribuídos e arquitectura de backend, tudo o que dá suporte a decisões tomadas em cima de dados fiáveis.
+        </p>
+      </div>
+
+      <div class="whyfin">
+        <div class="whyfin__grid" aria-hidden="true">
+          <div class="mini-grid" id="miniGrid1"></div>
+        </div>
+        <div class="whyfin__text">
+          <h3 data-i18n="whyfin-title">Porquê banca &amp; seguros</h3>
+          <p data-i18n="whyfin-body">
+            Poucos sectores dependem tanto de dados bem estruturados como a banca e os seguros: risco de crédito,
+            transacções, apólices, sinistros. É um ambiente onde modelagem de dados rigorosa, pipelines
+            confiáveis e sistemas bem desenhados fazem a diferença entre uma decisão informada e um erro caro.
+            É essa precisão que me atrai. E é para lá que estou a direccionar deliberadamente os meus próximos projectos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPETÊNCIAS ============ -->
+  <section class="section section--alt" id="competencias">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-i18n="skills-eyebrow">02 — Competências</p>
+      <h2 class="section__title" data-i18n="skills-title">O que uso para construir</h2>
+
+      <div class="skills">
+        <div class="skill-card">
+          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <h4 data-i18n="skill-1-title">Linguagens</h4>
+          <p>SQL, Python, TypeScript, JavaScript, C, C++</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <h4 data-i18n="skill-2-title">Engenharia de Dados</h4>
+          <p data-i18n="skill-2-body">ETL / ELT, Modelagem de Dados, Pandas, Databricks, Apache Airflow, Power BI</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <h4 data-i18n="skill-3-title">Backend</h4>
+          <p>NestJS, Express, REST APIs, Docker</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <h4 data-i18n="skill-4-title">Cloud &amp; Monitorização</h4>
+          <p>Azure, AWS, Prometheus, Grafana, Datadog</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <h4 data-i18n="skill-5-title">Bases de Dados</h4>
+          <p>PostgreSQL, MySQL, SQLite</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <h4 data-i18n="skill-6-title">Ferramentas</h4>
+          <p>Git, GitHub, Linux, VS Code</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIÊNCIA ============ -->
+  <section class="section" id="experiencia">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-i18n="exp-eyebrow">03 — Percurso</p>
+      <h2 class="section__title" data-i18n="exp-title">Formação e experiência</h2>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <p class="timeline__period" data-i18n="exp-1-period">Presente</p>
+            <h4 data-i18n="exp-1-title">Instrutor de Programação — Autónomo</h4>
+            <p data-i18n="exp-1-body">
+              Ensino programação a crianças, actualmente com 7 alunos, desenvolvendo a capacidade de
+              simplificar problemas complexos. Boa didática para comunicação técnica e facilidade em
+              transmitir ideias a quem está a começar.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <p class="timeline__period" data-i18n="exp-2-period">Presente</p>
+            <h4 data-i18n="exp-2-title">42 Luanda — Engenharia de Software</h4>
+            <p data-i18n="exp-2-body">
+              Ambiente de aprendizagem autónomo e colaborativo, focado em resolver problemas reais através
+              de projectos intensivos. Percurso que começou com sistemas em C, expandiu para análise de dados
+              com SQL, e foi até à programação web com JavaScript/TypeScript.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <p class="timeline__period" data-i18n="exp-3-period">Não concluído</p>
+            <h4 data-i18n="exp-3-title">ISPTEC — Engenharia Civil</h4>
+            <p data-i18n="exp-3-body">
+              Onde treinei a mente para pensar com rigor e lógica, transformando problemas complexos
+              em soluções estruturadas, uma base que hoje aplico a sistemas em vez de estruturas físicas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTOS ACTUAIS ============ -->
+  <section class="section section--alt" id="projectos">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-i18n="proj-eyebrow">04 — Projectos</p>
+      <h2 class="section__title" data-i18n="proj-title">O que já construí</h2>
+
+      <div class="projects">
+        <article class="project-card">
+          <span class="project-card__tag" data-i18n="proj-1-tag">Dados · APIs</span>
+          <h4>42 Prediction</h4>
+          <p data-i18n="proj-1-body">
+            Plataforma focada na análise e gestão de dados de estudantes da 42, permitindo criar previsões
+            e acompanhar resultados. Aplicou modelagem de dados, SQL, desenvolvimento de APIs e boas
+            práticas de engenharia de software.
+          </p>
+          <div class="project-card__stack">
+            <span>SQL</span><span>APIs</span><span data-i18n="proj-1-tag3">Modelagem de Dados</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <span class="project-card__tag" data-i18n="proj-2-tag">Sistemas · Redes</span>
+          <h4 data-i18n="proj-2-title">Servidor IRC</h4>
+          <p data-i18n="proj-2-body">
+            Implementação de um servidor de chat conforme as especificações do protocolo IRC, com validação
+            de comunicação entre múltiplos clientes em simultâneo. Análise e correcção de erros durante o
+            desenvolvimento e depuração da aplicação.
+          </p>
+          <div class="project-card__stack">
+            <span>C++</span><span data-i18n="proj-2-tag2">Protocolos de Rede</span><span>Debugging</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROTEIRO — BANCA & SEGUROS ============ -->
+  <section class="section" id="roteiro">
+    <div class="section__inner">
+      <p class="section__eyebrow" data-i18n="road-eyebrow">05 — Roteiro</p>
+      <h2 class="section__title" data-i18n="road-title">A construir para banca &amp; seguros</h2>
+      <p class="section__intro" data-i18n="road-intro">
+        Estes são os próximos projectos que estou a desenhar, deliberadamente direccionados para os
+        problemas de dados mais comuns em instituições financeiras e seguradoras. Cada um junta as
+        competências que já tenho a um caso de uso real do sector.
+      </p>
+
+      <div class="roadmap">
+        <article class="roadmap-card">
+          <p class="roadmap-card__num">01</p>
+          <h4 data-i18n="road-1-title">Pipeline de detecção de fraude</h4>
+          <p data-i18n="road-1-body">
+            Pipeline que ingere transacções simuladas, aplica regras e um modelo estatístico de anomalias,
+            e expõe os alertas num dashboard de monitorização em tempo quase-real.
+          </p>
+          <div class="roadmap-card__stack">
+            <span>Airflow</span><span>Python</span><span>PostgreSQL</span><span>Grafana</span>
+          </div>
+        </article>
+
+        <article class="roadmap-card">
+          <p class="roadmap-card__num">02</p>
+          <h4 data-i18n="road-2-title">Motor de score de risco de crédito</h4>
+          <p data-i18n="road-2-body">
+            ETL que transforma dados de clientes em variáveis (features), calcula um score de risco simples
+            e expõe o resultado através de uma API para consulta em tempo real.
+          </p>
+          <div class="roadmap-card__stack">
+            <span>NestJS</span><span>Pandas</span><span>PostgreSQL</span><span>Docker</span>
+          </div>
+        </article>
+
+        <article class="roadmap-card">
+          <p class="roadmap-card__num">03</p>
+          <h4 data-i18n="road-3-title">Dashboard de sinistros de seguros</h4>
+          <p data-i18n="road-3-body">
+            Ingestão e limpeza de dados de sinistros, modelação dimensional (esquema em estrela) e um
+            dashboard interactivo para acompanhar volumes, tempos de resposta e custo médio por sinistro.
+          </p>
+          <div class="roadmap-card__stack">
+            <span>Databricks</span><span>Power BI</span><span>SQL</span>
+          </div>
+        </article>
+
+        <article class="roadmap-card">
+          <p class="roadmap-card__num">04</p>
+          <h4 data-i18n="road-4-title">API de Open Banking (simulada)</h4>
+          <p data-i18n="road-4-body">
+            Backend REST que simula contas, transferências e extractos, com autenticação e registo de
+            auditoria, para praticar os padrões de segurança e conformidade típicos do sector bancário.
+          </p>
+          <div class="roadmap-card__stack">
+            <span>NestJS</span><span>PostgreSQL</span><span>Docker</span><span>REST</span>
+          </div>
+        </article>
+
+        <article class="roadmap-card">
+          <p class="roadmap-card__num">05</p>
+          <h4 data-i18n="road-5-title">Automação de relatórios regulatórios</h4>
+          <p data-i18n="road-5-body">
+            Pipeline agendado que agrega dados financeiros de várias fontes e gera relatórios periódicos
+            automaticamente, com monitorização e alertas de falha.
+          </p>
+          <div class="roadmap-card__stack">
+            <span>Airflow</span><span>Prometheus</span><span>Python</span>
+          </div>
+        </article>
+
+        <article class="roadmap-card">
+          <p class="roadmap-card__num">06</p>
+          <h4 data-i18n="road-6-title">Data warehouse de apólices</h4>
+          <p data-i18n="road-6-body">
+            Modelação de um data warehouse para dados de apólices e prémios, preparado para queries
+            analíticas rápidas sobre exposição ao risco e desempenho da carteira.
+          </p>
+          <div class="roadmap-card__stack">
+            <span>SQL</span><span>Data Warehousing</span><span>Databricks</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section section--contact" id="contacto">
+    <div class="section__inner">
+      <div class="contact-grid" aria-hidden="true" id="miniGrid2"></div>
+      <p class="section__eyebrow" data-i18n="contact-eyebrow">06 — Contacto</p>
+      <h2 class="section__title contact__title" data-i18n="contact-title">Vamos construir algo com estrutura.</h2>
+      <p class="section__intro" data-i18n="contact-intro">
+        Aberto a oportunidades em engenharia de dados e backend, sobretudo em banca, seguros e
+        outras indústrias movidas a dados.
+      </p>
+      <div class="contact__links">
+        <a href="mailto:matendafigueiredo@hotmail.com" class="btn btn--primary">matendafigueiredo@hotmail.com</a>
+        <a href="tel:+244935570341" class="btn btn--ghost">+244 935 570 341</a>
+      </div>
+      <div class="contact__secondary">
+        <a href="https://github.com/nelsonmatenda" target="_blank" rel="noopener">GitHub — @nelsonmatenda ↗</a>
+        <a href="tel:+244953105078">+244 953 105 078</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span class="footer__mark">
+      <span class="nav__mark-grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      Nelson Figueiredo
+    </span>
+    <p><span data-i18n="footer-line">Feito com ordem, precisão e estrutura.</span> © <span id="year"></span></p>
+    <a href="#top" class="footer__top" data-i18n="footer-top">Voltar ao topo ↑</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
