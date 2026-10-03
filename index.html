@@ -1,353 +1,505 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" class="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta-title">Nelson Figueiredo — Engenheiro de Software & Dados</title>
-<meta name="description" data-i18n-attr="content" data-i18n="meta-desc" content="Nelson Ernesto Figueiredo — Engenheiro de Software e Dados. Backend com TypeScript/NestJS, pipelines de dados, a construir para banca e seguros.">
-<meta property="og:title" content="Nelson Figueiredo — Software & Data Engineer">
-<meta property="og:description" content="Engenheiro de Software e Dados. Backend com TypeScript/NestJS, pipelines de dados, a construir para banca e seguros.">
-<meta property="og:type" content="website">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta-title">Nelson Figueiredo — Engenheiro de Software &amp; Dados</title>
+    <meta name="description" data-i18n-attr="content" data-i18n="meta-desc" content="Nelson Ernesto Figueiredo — Engenheiro de Software e Dados. Backend com Python, NestJS, pipelines de dados para banca e seguros.">
+    <meta property="og:title" content="Nelson Figueiredo — Software &amp; Data Engineer">
+    <meta property="og:description" content="Engenheiro de Software e Dados. Backend com Python, NestJS, pipelines de dados para banca e seguros.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://matenda.me">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#0a0f17',       /* Nelson's signature deep navy */
+                        cardbg: '#0f1823',       /* Surface card background */
+                        cardhover: '#142a38',    /* Hover state background */
+                        cardborder: 'rgba(201, 199, 240, 0.12)', /* Subtle border */
+                        cardborderhover: 'rgba(47, 169, 154, 0.45)', /* Accent teal glow */
+                        accent: '#2FA99A',       /* Signature teal/emerald */
+                        accentSoft: '#A3E4D9',   /* Soft accent tint */
+                        accentDim: 'rgba(47, 169, 154, 0.15)',
+                        lavender: '#c9c7f0',     /* Secondary accent lavender */
+                        lavenderDim: 'rgba(201, 199, 240, 0.25)',
+                        textMain: '#f3f2fb',     /* Primary crisp text */
+                        muted: '#9aa5c2',        /* Secondary body text */
+                        subtle: '#6c7796'        /* Muted metadata */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        display: ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Project Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-darkbg text-zinc-300 min-h-screen py-10 px-4 sm:px-6 md:px-8 relative selection:bg-accent/30 selection:text-textMain">
 
-<div class="grain"></div>
+    <!-- Subtle texture overlay -->
+    <div class="grain" aria-hidden="true"></div>
 
-<!-- ============ NAV ============ -->
-<header class="nav" id="top">
-  <a href="#top" class="nav__mark" aria-label="Nelson Figueiredo — início">
-    <span class="nav__mark-grid" aria-hidden="true">
-      <i></i><i></i><i></i><i></i>
-    </span>
-    NF
-  </a>
-  <nav class="nav__links">
-    <a href="#sobre" data-i18n="nav-about">Sobre</a>
-    <a href="#competencias" data-i18n="nav-skills">Competências</a>
-    <a href="#projectos" data-i18n="nav-projects">Projectos</a>
-    <a href="#roteiro" data-i18n="nav-roadmap">Roteiro</a>
-    <a href="#contacto" class="nav__cta" data-i18n="nav-contact">Contacto</a>
-  </nav>
-  <div class="lang-switch" role="group" aria-label="Idioma / Language">
-    <button type="button" class="lang-switch__btn is-active" data-lang="pt" aria-pressed="true">PT</button>
-    <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
-  </div>
-  <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</header>
+    <div class="max-w-[560px] mx-auto relative z-10">
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero__inner">
-    <p class="eyebrow" data-i18n="hero-eyebrow">SOFTWARE &amp; DATA ENGINEER · LUANDA, ANGOLA</p>
-    <h1 class="hero__title">Nelson<br>Figueiredo</h1>
-    <p class="hero__tagline" data-i18n="hero-tagline">Ordem. Precisão. Estrutura.</p>
-    <p class="hero__lede" data-i18n="hero-lede">
-      Construo serviços de backend e pipelines de dados com o mesmo rigor com que se lê um esquema: peça a peça, sem deixar nada ao acaso. Hoje isso é Python, NestJS e PostgreSQL/SQLServer. Amanhã, quero que sejam os sistemas que sustentam bancos e seguradoras
-    </p>
-    <div class="hero__actions">
-      <a href="#roteiro" class="btn btn--primary" data-i18n="hero-btn-primary">Ver roteiro para banca &amp; seguros</a>
-      <a href="#contacto" class="btn btn--ghost" data-i18n="hero-btn-ghost">Contactar</a>
-    </div>
-    <div class="hero__social">
-      <a href="https://github.com/nelsonmatenda" target="_blank" rel="noopener">GitHub ↗</a>
-      <span class="dot">·</span>
-      <a href="https://www.linkedin.com/in/nelsonmatenda/" target="_blank" rel="noopener">Linkedin ↗</a>
-      <span class="dot">·</span>
-      <a href="mailto:matendafigueiredo@hotmail.com">Email ↗</a>
-      <span class="dot">·</span>
-      <a href="tel:+244935570341">+244 935 570 341</a>
-    </div>
-  </div>
-</section>
-
-<main>
-
-  <!-- ============ SOBRE ============ -->
-  <section class="section" id="sobre">
-    <div class="section__inner">
-      <p class="section__eyebrow" data-i18n="about-eyebrow">01 — Sobre</p>
-      <div class="about">
-        <p class="about__lead" data-i18n-html="about-lead">
-          Sou desenvolvedor de software e estudante na <strong>42 Luanda</strong>, com experiência a
-          construir serviços de backend em TypeScript, NestJS, PostgreSQL e Docker.
-        </p>
-        <p data-i18n-html="about-body">
-          O meu foco actual de carreira é <strong>Engenharia de Dados</strong>: aprender a desenhar
-          pipelines escaláveis, modelar dados com cuidado e construir aplicações orientadas por dados.
-          Interesso-me também por infra-estrutura em nuvem, sistemas distribuídos e arquitectura de backend, tudo o que dá suporte a decisões tomadas em cima de dados fiáveis.
-        </p>
-      </div>
-
-      <div class="whyfin">
-        <div class="whyfin__grid" aria-hidden="true">
-          <div class="mini-grid" id="miniGrid1"></div>
+        <!-- Top Right Language Switcher (PT / EN) -->
+        <div class="absolute top-0 right-0 z-20">
+            <div class="inline-flex items-center gap-1 p-1 rounded-full bg-cardbg border border-cardborder shadow-sm font-mono text-xs">
+                <button type="button" id="btnLangPt" class="px-2.5 py-1 rounded-full text-xs font-semibold transition-all bg-accent text-darkbg shadow-sm" aria-label="Português">PT</button>
+                <button type="button" id="btnLangEn" class="px-2.5 py-1 rounded-full text-xs font-semibold transition-all text-muted hover:text-textMain" aria-label="English">EN</button>
+            </div>
         </div>
-        <div class="whyfin__text">
-          <h3 data-i18n="whyfin-title">Porquê banca &amp; seguros</h3>
-          <p data-i18n="whyfin-body">
-            Poucos sectores dependem tanto de dados bem estruturados como a banca e os seguros: risco de crédito,
-            transacções, apólices, sinistros. É um ambiente onde modelagem de dados rigorosa, pipelines
-            confiáveis e sistemas bem desenhados fazem a diferença entre uma decisão informada e um erro caro.
-            É essa precisão que me atrai. E é para lá que estou a direccionar deliberadamente os meus próximos projectos.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ COMPETÊNCIAS ============ -->
-  <section class="section section--alt" id="competencias">
-    <div class="section__inner">
-      <p class="section__eyebrow" data-i18n="skills-eyebrow">02 — Competências</p>
-      <h2 class="section__title" data-i18n="skills-title">O que uso para construir</h2>
+        <!-- ==================== PROFILE HEADER ==================== -->
+        <header class="mb-12 pt-2">
+            <div class="flex items-center gap-4 mb-6">
+                <!-- Profile Mockup Avatar -->
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80"
+                         onerror="this.src='https://placehold.co/120x120/0f1823/2FA99A?text=NF'"
+                         alt="Nelson Figueiredo"
+                         class="w-16 h-16 rounded-full object-cover border-2 border-accent/60 shadow-lg shadow-accent/10">
+                    <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-accent border-2 border-darkbg" title="Online / Disponível"></span>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-bold font-display text-textMain tracking-tight">Nelson Figueiredo</h1>
+                    <p class="text-sm text-accent font-mono font-medium" data-i18n="header-role">Software &amp; Data Engineer · Luanda, Angola</p>
+                </div>
+            </div>
 
-      <div class="skills">
-        <div class="skill-card">
-          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <h4 data-i18n="skill-1-title">Linguagens</h4>
-          <p>SQL, Python, TypeScript, JavaScript, C, C++</p>
-        </div>
-        <div class="skill-card">
-          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <h4 data-i18n="skill-2-title">Engenharia de Dados</h4>
-          <p data-i18n="skill-2-body">ETL / ELT, Modelagem de Dados, Pandas, Databricks, Apache Airflow, Power BI</p>
-        </div>
-        <div class="skill-card">
-          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <h4 data-i18n="skill-3-title">Backend</h4>
-          <p>NestJS, Express, REST APIs, Docker</p>
-        </div>
-        <div class="skill-card">
-          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <h4 data-i18n="skill-4-title">Cloud &amp; Monitorização</h4>
-          <p>Azure, AWS, Prometheus, Grafana, Datadog</p>
-        </div>
-        <div class="skill-card">
-          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <h4 data-i18n="skill-5-title">Bases de Dados</h4>
-          <p>PostgreSQL, MySQL, SQLite</p>
-        </div>
-        <div class="skill-card">
-          <span class="skill-card__grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <h4 data-i18n="skill-6-title">Ferramentas</h4>
-          <p>Git, GitHub, Linux, VS Code</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EXPERIÊNCIA ============ -->
-  <section class="section" id="experiencia">
-    <div class="section__inner">
-      <p class="section__eyebrow" data-i18n="exp-eyebrow">03 — Percurso</p>
-      <h2 class="section__title" data-i18n="exp-title">Formação e experiência</h2>
-
-      <div class="timeline">
-        <div class="timeline__item">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <p class="timeline__period" data-i18n="exp-1-period">Presente</p>
-            <h4 data-i18n="exp-1-title">Instrutor de Programação — Autónomo</h4>
-            <p data-i18n="exp-1-body">
-              Ensino programação a crianças, actualmente com 7 alunos, desenvolvendo a capacidade de
-              simplificar problemas complexos. Boa didática para comunicação técnica e facilidade em
-              transmitir ideias a quem está a começar.
+            <!-- Bio Statement -->
+            <p class="text-[15px] leading-relaxed text-zinc-300 mb-8 font-normal" data-i18n="header-bio">
+                Construo serviços de backend e pipelines de dados com o mesmo rigor com que se lê um esquema: peça a peça, sem deixar nada ao acaso. Foco em soluções estruturadas para banca, seguros e infraestruturas analíticas.
             </p>
-          </div>
-        </div>
 
-        <div class="timeline__item">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <p class="timeline__period" data-i18n="exp-2-period">Presente</p>
-            <h4 data-i18n="exp-2-title">42 Luanda — Engenharia de Software</h4>
-            <p data-i18n="exp-2-body">
-              Ambiente de aprendizagem autónomo e colaborativo, focado em resolver problemas reais através
-              de projectos intensivos. Percurso que começou com sistemas em C, expandiu para análise de dados
-              com SQL, e foi até à programação web com JavaScript/TypeScript.
+            <!-- NOW Section -->
+            <div class="space-y-3 mb-8 p-4 rounded-xl bg-cardbg/70 border border-cardborder">
+                <div class="text-[11px] font-bold font-mono uppercase tracking-wider text-accent" data-i18n="now-heading">AGORA / NOW</div>
+                <p class="text-[14px] leading-relaxed text-textMain font-medium" data-i18n="now-lead">
+                    Actualmente a aprofundar sistemas de dados e engenharia de software distribuída:
+                </p>
+
+                <!-- Pill Badges -->
+                <div class="flex flex-wrap items-center gap-2.5 py-1">
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cardbg border border-cardborder text-xs font-medium text-textMain hover:border-accent/40 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-accent inline-block"></span>
+                        <span data-i18n="now-badge-1">42 Luanda</span>
+                    </span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cardbg border border-cardborder text-xs font-medium text-textMain hover:border-accent/40 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-lavender inline-block"></span>
+                        <span data-i18n="now-badge-2">Instrutor de Programação (7 alunos)</span>
+                    </span>
+                    <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cardbg border border-cardborder text-xs font-medium text-textMain hover:border-accent/40 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-accentSoft inline-block"></span>
+                        <span data-i18n="now-badge-3">Roteiro Banca &amp; Seguros</span>
+                    </span>
+                </div>
+
+                <p class="text-[13px] leading-normal text-muted" data-i18n="now-subtext">
+                    Estudante na 42 Luanda focado em sistemas, concorrência e backend. Simultaneamente a ensinar lógica de programação a crianças e a desenhar pipelines analíticos.
+                </p>
+            </div>
+
+            <!-- Previous Experience -->
+            <p class="text-[14px] text-muted leading-relaxed mb-6 border-l-2 border-cardborder pl-3.5" data-i18n="prev-exp">
+                Antes disso, frequentei Engenharia Civil no ISPTEC — onde treinei a mente para pensar com rigor e lógica matemática, transformando problemas complexos em soluções estruturadas aplicadas a sistemas de dados.
             </p>
-          </div>
-        </div>
 
-        <div class="timeline__item">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <p class="timeline__period" data-i18n="exp-3-period">Não concluído</p>
-            <h4 data-i18n="exp-3-title">ISPTEC — Engenharia Civil</h4>
-            <p data-i18n="exp-3-body">
-              Onde treinei a mente para pensar com rigor e lógica, transformando problemas complexos
-              em soluções estruturadas, uma base que hoje aplico a sistemas em vez de estruturas físicas.
+            <!-- Social Links -->
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-sm pt-1">
+                <a href="https://github.com/nelsonmatenda" target="_blank" rel="noopener" class="text-zinc-300 hover:text-accent font-medium underline underline-offset-4 decoration-zinc-700 hover:decoration-accent transition-colors">
+                    <i class="fa-brands fa-github mr-1.5"></i>GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/nelsonmatenda/" target="_blank" rel="noopener" class="text-zinc-300 hover:text-accent font-medium underline underline-offset-4 decoration-zinc-700 hover:decoration-accent transition-colors">
+                    <i class="fa-brands fa-linkedin mr-1.5"></i>LinkedIn
+                </a>
+                <a href="mailto:matendafigueiredo@hotmail.com" class="text-zinc-300 hover:text-accent font-medium underline underline-offset-4 decoration-zinc-700 hover:decoration-accent transition-colors">
+                    <i class="fa-solid fa-envelope mr-1.5"></i>Email
+                </a>
+                <a href="tel:+244935570341" class="text-zinc-300 hover:text-accent font-medium underline underline-offset-4 decoration-zinc-700 hover:decoration-accent transition-colors font-mono text-xs">
+                    <i class="fa-solid fa-phone mr-1.5"></i>+244 935 570 341
+                </a>
+            </div>
+        </header>
+
+        <!-- ==================== RECENT PROJECTS ==================== -->
+        <section class="mb-14">
+            <h2 class="text-xs font-bold font-mono uppercase tracking-wider text-muted mb-5" data-i18n="recent-projects-heading">PROJECTOS EM DESTAQUE</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6">
+
+                <!-- Project Card 1: 42 Prediction -->
+                <div class="portfolio-card group relative p-4 rounded-xl bg-cardbg border border-cardborder hover:border-accent/50 hover:bg-cardhover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-chart-line text-accent text-sm"></i>
+                                <span class="font-bold text-textMain text-[15px] group-hover:text-accent transition-colors">42 Prediction</span>
+                            </div>
+                            <span class="text-[10px] font-semibold font-mono px-2 py-0.5 rounded-full bg-accentDim text-accentSoft border border-accent/30" data-i18n="proj-1-tag">CONCLUÍDO</span>
+                        </div>
+                        <p class="text-[13px] text-muted leading-snug mb-4" data-i18n="proj-1-desc">
+                            Plataforma para análise e gestão de métricas de estudantes da 42, gerando previsões de desempenho e acompanhamento de resultados.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 text-[11px] text-subtle pt-2 border-t border-cardborder font-mono">
+                        <span class="text-zinc-300" data-i18n="proj-1-m1">Modelagem SQL</span>
+                        <span>•</span>
+                        <span class="text-zinc-300" data-i18n="proj-1-m2">APIs REST</span>
+                        <span>•</span>
+                        <span class="text-zinc-300" data-i18n="proj-1-m3">TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Servidor IRC -->
+                <div class="portfolio-card group relative p-4 rounded-xl bg-cardbg border border-cardborder hover:border-accent/50 hover:bg-cardhover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-server text-accent text-sm"></i>
+                                <span class="font-bold text-textMain text-[15px] group-hover:text-accent transition-colors" data-i18n="proj-2-title">Servidor IRC</span>
+                            </div>
+                            <span class="text-[10px] font-semibold font-mono px-2 py-0.5 rounded-full bg-lavenderDim text-lavender border border-lavender/30" data-i18n="proj-2-tag">42 CURRÍCULO</span>
+                        </div>
+                        <p class="text-[13px] text-muted leading-snug mb-4" data-i18n="proj-2-desc">
+                            Implementação de servidor de chat conforme as especificações RFC 1459, multiplexagem I/O não bloqueante e múltiplos clientes simultâneos.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 text-[11px] text-subtle pt-2 border-t border-cardborder font-mono">
+                        <span class="text-zinc-300" data-i18n="proj-2-m1">C++98</span>
+                        <span>•</span>
+                        <span class="text-zinc-300" data-i18n="proj-2-m2">Sockets TCP/IP</span>
+                        <span>•</span>
+                        <span class="text-zinc-300" data-i18n="proj-2-m3">Debugging</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Pipeline de Detecção de Fraude -->
+                <div class="portfolio-card group relative p-4 rounded-xl bg-cardbg border border-cardborder hover:border-accent/50 hover:bg-cardhover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-accent text-sm"></i>
+                                <span class="font-bold text-textMain text-[15px] group-hover:text-accent transition-colors" data-i18n="proj-3-title">Detecção de Fraude</span>
+                            </div>
+                            <span class="text-[10px] font-semibold font-mono px-2 py-0.5 rounded-full bg-accentDim text-accentSoft border border-accent/30" data-i18n="proj-3-tag">BANCA &amp; RISCO</span>
+                        </div>
+                        <p class="text-[13px] text-muted leading-snug mb-4" data-i18n="proj-3-desc">
+                            Pipeline de dados que ingere fluxos de transacções simuladas, calcula anomalias estatísticas e emite alertas num dashboard operacional.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 text-[11px] text-subtle pt-2 border-t border-cardborder font-mono">
+                        <span class="text-zinc-300" data-i18n="proj-3-m1">Airflow</span>
+                        <span>•</span>
+                        <span class="text-zinc-300" data-i18n="proj-3-m2">Python</span>
+                        <span>•</span>
+                        <span class="text-zinc-300" data-i18n="proj-3-m3">Grafana</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: Motor de Score de Risco de Crédito -->
+                <div class="portfolio-card group relative p-4 rounded-xl bg-cardbg border border-cardborder hover:border-accent/50 hover:bg-cardhover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-gauge-high text-accent text-sm"></i>
+                                <span class="font-bold text-textMain text-[15px] group-hover:text-accent transition-colors" data-i18n="proj-4-title">Score de Risco</span>
+                            </div>
+                            <span class="text-[10px] font-semibold font-mono px-2 py-0.5 rounded-full bg-accentDim text-accentSoft border border-accent/30" data-i18n="proj-4-tag">FINTECH</span>
+                        </div>
+                        <p class="text-[13px] text-muted leading-snug mb-4" data-i18n="proj-4-desc">
+                            ETL que transforma dados cadastrais e financeiros em variáveis de risco, calcula a probabilidade de crédito e expõe resultados via API.
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2 text-[11px] text-subtle pt-2 border-t border-cardborder font-mono">
+                        <span class="text-zinc-300" data-i18n="proj-4-m1">NestJS</span>
+                        <span>•</span>
+                        <span class="text-zinc-300" data-i18n="proj-4-m2">Pandas</span>
+                        <span>•</span>
+                        <span class="text-zinc-300" data-i18n="proj-4-m3">Docker</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Secondary Projects / Banking & Insurance Roadmap (Inline List) -->
+            <div class="space-y-2 pt-2">
+
+                <div class="group flex items-center justify-between p-3 rounded-lg hover:bg-cardhover transition-colors border border-transparent hover:border-cardborder">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-invoice text-accent text-sm w-4 text-center"></i>
+                        <span class="font-medium text-textMain text-sm group-hover:text-accent transition-colors" data-i18n="sec-1-title">Dashboard de Sinistros de Seguros</span>
+                        <span class="text-xs text-muted hidden sm:inline" data-i18n="sec-1-desc">Modelação dimensional em estrela (Databricks, Power BI e SQL)</span>
+                    </div>
+                    <span class="text-[11px] font-mono text-accentSoft bg-accentDim px-2 py-0.5 rounded">Databricks</span>
+                </div>
+
+                <div class="group flex items-center justify-between p-3 rounded-lg hover:bg-cardhover transition-colors border border-transparent hover:border-cardborder">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-building-columns text-accent text-sm w-4 text-center"></i>
+                        <span class="font-medium text-textMain text-sm group-hover:text-accent transition-colors" data-i18n="sec-2-title">API de Open Banking (Simulada)</span>
+                        <span class="text-xs text-muted hidden sm:inline" data-i18n="sec-2-desc">Padrões de segurança, contas, transferências e auditoria bancária</span>
+                    </div>
+                    <span class="text-[11px] font-mono text-accentSoft bg-accentDim px-2 py-0.5 rounded">NestJS</span>
+                </div>
+
+                <div class="group flex items-center justify-between p-3 rounded-lg hover:bg-cardhover transition-colors border border-transparent hover:border-cardborder">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-clock-rotate-left text-accent text-sm w-4 text-center"></i>
+                        <span class="font-medium text-textMain text-sm group-hover:text-accent transition-colors" data-i18n="sec-3-title">Automação de Relatórios Regulatórios</span>
+                        <span class="text-xs text-muted hidden sm:inline" data-i18n="sec-3-desc">Pipeline agendado para agregação financeira e conformidade com alertas</span>
+                    </div>
+                    <span class="text-[11px] font-mono text-accentSoft bg-accentDim px-2 py-0.5 rounded">Airflow</span>
+                </div>
+
+                <div class="group flex items-center justify-between p-3 rounded-lg hover:bg-cardhover transition-colors border border-transparent hover:border-cardborder">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-database text-accent text-sm w-4 text-center"></i>
+                        <span class="font-medium text-textMain text-sm group-hover:text-accent transition-colors" data-i18n="sec-4-title">Data Warehouse de Apólices</span>
+                        <span class="text-xs text-muted hidden sm:inline" data-i18n="sec-4-desc">Consultas analíticas rápidas sobre exposição ao risco e carteira</span>
+                    </div>
+                    <span class="text-[11px] font-mono text-accentSoft bg-accentDim px-2 py-0.5 rounded">SQL DW</span>
+                </div>
+
+            </div>
+
+            <div class="mt-4">
+                <a href="https://github.com/nelsonmatenda" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs text-muted hover:text-accent font-medium transition-colors">
+                    <span data-i18n="more-github">Mais projectos no GitHub</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS & TECH STACK ==================== -->
+        <section class="mb-14">
+            <h2 class="text-xs font-bold font-mono uppercase tracking-wider text-muted mb-5" data-i18n="skills-heading">STACK &amp; COMPETÊNCIAS</h2>
+
+            <div class="space-y-4">
+                <!-- Languages -->
+                <div class="p-3.5 rounded-xl bg-cardbg border border-cardborder">
+                    <div class="text-xs font-semibold text-textMain font-mono mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-accent"></i>
+                        <span data-i18n="skills-cat-languages">Linguagens</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">SQL</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Python</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">TypeScript</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">JavaScript</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">C</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">C++</span>
+                    </div>
+                </div>
+
+                <!-- Data Engineering -->
+                <div class="p-3.5 rounded-xl bg-cardbg border border-cardborder">
+                    <div class="text-xs font-semibold text-textMain font-mono mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-diagram-project text-accent"></i>
+                        <span data-i18n="skills-cat-data">Engenharia de Dados</span>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">ETL / ELT</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Modelagem Dimensional</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Pandas</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Apache Airflow</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Databricks</span>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Backend & Databases -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-3.5 rounded-xl bg-cardbg border border-cardborder">
+                        <div class="text-xs font-semibold text-textMain font-mono mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-server text-accent"></i>
+                            <span data-i18n="skills-cat-backend">Backend &amp; DevOps</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">NestJS</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Express</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Docker</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Linux</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Git</span>
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-cardbg border border-cardborder">
+                        <div class="text-xs font-semibold text-textMain font-mono mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-cloud text-accent"></i>
+                            <span data-i18n="skills-cat-databases">Bases de Dados &amp; Cloud</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">PostgreSQL</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">MySQL</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">SQLite</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Azure</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-darkbg border border-cardborder text-zinc-300 font-mono">Prometheus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EXPERIMENTS ==================== -->
+        <section class="mb-14">
+            <h2 class="text-xs font-bold font-mono uppercase tracking-wider text-muted mb-5" data-i18n="experiments-heading">EXPERIÊNCIAS &amp; LAB</h2>
+
+            <div class="space-y-2">
+
+                <!-- Experiment 1: Data Pulse Matrix -->
+                <div class="group flex items-center justify-between py-3 px-3.5 rounded-lg bg-cardbg/50 hover:bg-cardhover transition-colors border border-cardborder">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 rounded bg-darkbg border border-cardborder flex items-center justify-center text-accent">
+                            <div id="dataGridPulse" class="data-grid-pulse" aria-hidden="true"></div>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-textMain text-sm group-hover:text-accent transition-colors block" data-i18n="exp-1-title">Matriz de Fluxo de Dados em Tempo Real</span>
+                            <span class="text-xs text-muted" data-i18n="exp-1-desc">Simulador visual de transmissão de pacotes e pulsos de dados</span>
+                        </div>
+                    </div>
+                    <span class="text-[11px] font-mono text-accentSoft bg-accentDim px-2 py-0.5 rounded">data-stream</span>
+                </div>
+
+                <!-- Experiment 2: Pedagogy Lab -->
+                <div class="group flex items-center justify-between py-3 px-3.5 rounded-lg bg-cardbg/50 hover:bg-cardhover transition-colors border border-cardborder">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-darkbg border border-cardborder flex items-center justify-center text-accent text-xs">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-textMain text-sm group-hover:text-accent transition-colors block" data-i18n="exp-2-title">Laboratório de Didática de Programação</span>
+                            <span class="text-xs text-muted" data-i18n="exp-2-desc">Módulos interativos para ensinar abstração e algoritmos a crianças</span>
+                        </div>
+                    </div>
+                    <span class="text-[11px] font-mono text-lavender bg-lavenderDim px-2 py-0.5 rounded">pedagogy</span>
+                </div>
+
+                <!-- Experiment 3: IRC Protocol Inspector -->
+                <div class="group flex items-center justify-between py-3 px-3.5 rounded-lg bg-cardbg/50 hover:bg-cardhover transition-colors border border-cardborder">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-darkbg border border-cardborder flex items-center justify-center text-accent text-xs">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-textMain text-sm group-hover:text-accent transition-colors block" data-i18n="exp-3-title">Protocol Inspector para IRC &amp; Sockets</span>
+                            <span class="text-xs text-muted" data-i18n="exp-3-desc">Validador de handshake e transmissão síncrona/assíncrona</span>
+                        </div>
+                    </div>
+                    <span class="text-[11px] font-mono text-accentSoft bg-accentDim px-2 py-0.5 rounded">systems</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== WRITING ==================== -->
+        <section class="mb-14">
+            <h2 class="text-xs font-bold font-mono uppercase tracking-wider text-muted mb-5" data-i18n="writing-heading">ARTIGOS &amp; NOTAS TÉCNICAS</h2>
+
+            <div class="space-y-3">
+                <div class="group flex items-center justify-between py-2.5 border-b border-cardborder hover:border-accent/40 transition-colors cursor-pointer">
+                    <span class="text-sm font-medium text-textMain group-hover:text-accent transition-colors" data-i18n="write-1-title">Do Betão aos Bytes: Como a Engenharia Civil Moldou a Minha Abordagem ao Software</span>
+                    <span class="text-xs text-subtle font-mono ml-4 shrink-0">2025</span>
+                </div>
+
+                <div class="group flex items-center justify-between py-2.5 border-b border-cardborder hover:border-accent/40 transition-colors cursor-pointer">
+                    <span class="text-sm font-medium text-textMain group-hover:text-accent transition-colors" data-i18n="write-2-title">Concorrência, Multiplexagem e Gestão de Memória em C++ na 42 Luanda</span>
+                    <span class="text-xs text-subtle font-mono ml-4 shrink-0">2024</span>
+                </div>
+
+                <div class="group flex items-center justify-between py-2.5 border-b border-cardborder hover:border-accent/40 transition-colors cursor-pointer">
+                    <span class="text-sm font-medium text-textMain group-hover:text-accent transition-colors" data-i18n="write-3-title">Arquitectura de Pipelines de Dados Confiáveis para o Sector Financeiro</span>
+                    <span class="text-xs text-subtle font-mono ml-4 shrink-0">2024</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TESTIMONIALS ==================== -->
+        <section class="mb-16">
+            <h2 class="text-xs font-bold font-mono uppercase tracking-wider text-muted mb-5" data-i18n="testimonials-heading">TESTEMUNHOS</h2>
+
+            <div class="flex flex-col gap-3.5">
+
+                <!-- Main Active Testimonial Card -->
+                <div class="p-6 rounded-xl bg-cardbg border border-cardborder flex flex-col justify-between shadow-md">
+                    <p id="testimonialText" class="text-sm italic text-zinc-300 leading-relaxed mb-6">
+                        "O Nelson destaca-se pelo rigor na arquitetura e na escrita de código. No desenvolvimento do servidor IRC e projectos de sistemas na 42, a sua atenção aos detalhes e persistência resolveram os problemas mais complexos de concorrência e memória."
+                    </p>
+
+                    <div class="flex items-center gap-3 pt-4 border-t border-cardborder">
+                        <img id="testimonialAuthorImg"
+                             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+                             onerror="this.src='https://placehold.co/100x100/142a38/2FA99A?text=NF'"
+                             alt="Manuel Silva"
+                             class="w-10 h-10 rounded-full object-cover border border-cardborder">
+                        <div>
+                            <div id="testimonialAuthorName" class="text-sm font-semibold text-textMain">Manuel Silva</div>
+                            <div id="testimonialAuthorRole" class="text-xs text-muted">Colega de Software na 42 Luanda</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Picker Buttons Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    <button type="button" onclick="switchTestimonial(0)" id="t-btn-0" class="t-btn flex-1 p-3 rounded-xl bg-cardbg border border-accent text-left transition-all opacity-100">
+                        <p id="t-short-0" class="text-[11px] text-muted line-clamp-2 mb-2">"Rigor na arquitetura e na escrita de código..."</p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" class="w-6 h-6 rounded-full object-cover" alt="Manuel">
+                            <span class="text-xs font-medium text-textMain truncate">Manuel Silva</span>
+                        </div>
+                    </button>
+
+                    <button type="button" onclick="switchTestimonial(1)" id="t-btn-1" class="t-btn flex-1 p-3 rounded-xl bg-cardbg border border-cardborder text-left transition-all opacity-60 hover:opacity-90">
+                        <p id="t-short-1" class="text-[11px] text-muted line-clamp-2 mb-2">"Didática e paciência extraordinárias..."</p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80" class="w-6 h-6 rounded-full object-cover" alt="Ana Paula">
+                            <span class="text-xs font-medium text-textMain truncate">Ana Paula Costa</span>
+                        </div>
+                    </button>
+
+                    <button type="button" onclick="switchTestimonial(2)" id="t-btn-2" class="t-btn flex-1 p-3 rounded-xl bg-cardbg border border-cardborder text-left transition-all opacity-60 hover:opacity-90">
+                        <p id="t-short-2" class="text-[11px] text-muted line-clamp-2 mb-2">"Compromisso com precisão e modelagem sólida..."</p>
+                        <div class="flex items-center gap-2">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" class="w-6 h-6 rounded-full object-cover" alt="Carlos">
+                            <span class="text-xs font-medium text-textMain truncate">Carlos Mendes</span>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="pt-8 border-t border-cardborder text-xs text-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>
+                <span data-i18n="footer-location">Baseado em Luanda, Angola • Aberto a desafios e boas conversas.</span>
+                <a href="mailto:matendafigueiredo@hotmail.com" class="text-accent hover:underline ml-1" data-i18n="footer-contact">Entrar em contacto</a>.
             </p>
-          </div>
-        </div>
-      </div>
+        </footer>
+
     </div>
-  </section>
 
-  <!-- ============ PROJECTOS ACTUAIS ============ -->
-  <section class="section section--alt" id="projectos">
-    <div class="section__inner">
-      <p class="section__eyebrow" data-i18n="proj-eyebrow">04 — Projectos</p>
-      <h2 class="section__title" data-i18n="proj-title">O que já construí</h2>
-
-      <div class="projects">
-        <article class="project-card">
-          <span class="project-card__tag" data-i18n="proj-1-tag">Dados · APIs</span>
-          <h4>42 Prediction</h4>
-          <p data-i18n="proj-1-body">
-            Plataforma focada na análise e gestão de dados de estudantes da 42, permitindo criar previsões
-            e acompanhar resultados. Aplicou modelagem de dados, SQL, desenvolvimento de APIs e boas
-            práticas de engenharia de software.
-          </p>
-          <div class="project-card__stack">
-            <span>SQL</span><span>APIs</span><span data-i18n="proj-1-tag3">Modelagem de Dados</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <span class="project-card__tag" data-i18n="proj-2-tag">Sistemas · Redes</span>
-          <h4 data-i18n="proj-2-title">Servidor IRC</h4>
-          <p data-i18n="proj-2-body">
-            Implementação de um servidor de chat conforme as especificações do protocolo IRC, com validação
-            de comunicação entre múltiplos clientes em simultâneo. Análise e correcção de erros durante o
-            desenvolvimento e depuração da aplicação.
-          </p>
-          <div class="project-card__stack">
-            <span>C++</span><span data-i18n="proj-2-tag2">Protocolos de Rede</span><span>Debugging</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ROTEIRO — BANCA & SEGUROS ============ -->
-  <section class="section" id="roteiro">
-    <div class="section__inner">
-      <p class="section__eyebrow" data-i18n="road-eyebrow">05 — Roteiro</p>
-      <h2 class="section__title" data-i18n="road-title">A construir para banca &amp; seguros</h2>
-      <p class="section__intro" data-i18n="road-intro">
-        Estes são os próximos projectos que estou a desenhar, deliberadamente direccionados para os
-        problemas de dados mais comuns em instituições financeiras e seguradoras. Cada um junta as
-        competências que já tenho a um caso de uso real do sector.
-      </p>
-
-      <div class="roadmap">
-        <article class="roadmap-card">
-          <p class="roadmap-card__num">01</p>
-          <h4 data-i18n="road-1-title">Pipeline de detecção de fraude</h4>
-          <p data-i18n="road-1-body">
-            Pipeline que ingere transacções simuladas, aplica regras e um modelo estatístico de anomalias,
-            e expõe os alertas num dashboard de monitorização em tempo quase-real.
-          </p>
-          <div class="roadmap-card__stack">
-            <span>Airflow</span><span>Python</span><span>PostgreSQL</span><span>Grafana</span>
-          </div>
-        </article>
-
-        <article class="roadmap-card">
-          <p class="roadmap-card__num">02</p>
-          <h4 data-i18n="road-2-title">Motor de score de risco de crédito</h4>
-          <p data-i18n="road-2-body">
-            ETL que transforma dados de clientes em variáveis (features), calcula um score de risco simples
-            e expõe o resultado através de uma API para consulta em tempo real.
-          </p>
-          <div class="roadmap-card__stack">
-            <span>NestJS</span><span>Pandas</span><span>PostgreSQL</span><span>Docker</span>
-          </div>
-        </article>
-
-        <article class="roadmap-card">
-          <p class="roadmap-card__num">03</p>
-          <h4 data-i18n="road-3-title">Dashboard de sinistros de seguros</h4>
-          <p data-i18n="road-3-body">
-            Ingestão e limpeza de dados de sinistros, modelação dimensional (esquema em estrela) e um
-            dashboard interactivo para acompanhar volumes, tempos de resposta e custo médio por sinistro.
-          </p>
-          <div class="roadmap-card__stack">
-            <span>Databricks</span><span>Power BI</span><span>SQL</span>
-          </div>
-        </article>
-
-        <article class="roadmap-card">
-          <p class="roadmap-card__num">04</p>
-          <h4 data-i18n="road-4-title">API de Open Banking (simulada)</h4>
-          <p data-i18n="road-4-body">
-            Backend REST que simula contas, transferências e extractos, com autenticação e registo de
-            auditoria, para praticar os padrões de segurança e conformidade típicos do sector bancário.
-          </p>
-          <div class="roadmap-card__stack">
-            <span>NestJS</span><span>PostgreSQL</span><span>Docker</span><span>REST</span>
-          </div>
-        </article>
-
-        <article class="roadmap-card">
-          <p class="roadmap-card__num">05</p>
-          <h4 data-i18n="road-5-title">Automação de relatórios regulatórios</h4>
-          <p data-i18n="road-5-body">
-            Pipeline agendado que agrega dados financeiros de várias fontes e gera relatórios periódicos
-            automaticamente, com monitorização e alertas de falha.
-          </p>
-          <div class="roadmap-card__stack">
-            <span>Airflow</span><span>Prometheus</span><span>Python</span>
-          </div>
-        </article>
-
-        <article class="roadmap-card">
-          <p class="roadmap-card__num">06</p>
-          <h4 data-i18n="road-6-title">Data warehouse de apólices</h4>
-          <p data-i18n="road-6-body">
-            Modelação de um data warehouse para dados de apólices e prémios, preparado para queries
-            analíticas rápidas sobre exposição ao risco e desempenho da carteira.
-          </p>
-          <div class="roadmap-card__stack">
-            <span>SQL</span><span>Data Warehousing</span><span>Databricks</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACTO ============ -->
-  <section class="section section--contact" id="contacto">
-    <div class="section__inner">
-      <div class="contact-grid" aria-hidden="true" id="miniGrid2"></div>
-      <p class="section__eyebrow" data-i18n="contact-eyebrow">06 — Contacto</p>
-      <h2 class="section__title contact__title" data-i18n="contact-title">Vamos construir algo com estrutura.</h2>
-      <p class="section__intro" data-i18n="contact-intro">
-        Aberto a oportunidades em engenharia de dados e backend, sobretudo em banca, seguros e
-        outras indústrias movidas a dados.
-      </p>
-      <div class="contact__links">
-        <a href="mailto:matendafigueiredo@hotmail.com" class="btn btn--primary">matendafigueiredo@hotmail.com</a>
-        <a href="tel:+244935570341" class="btn btn--ghost">+244 935 570 341</a>
-      </div>
-      <div class="contact__secondary">
-        <a href="https://github.com/nelsonmatenda" target="_blank" rel="noopener">GitHub — @nelsonmatenda ↗</a>
-        <a href="tel:+244953105078">+244 953 105 078</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="footer__inner">
-    <span class="footer__mark">
-      <span class="nav__mark-grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      Nelson Figueiredo
-    </span>
-    <p><span data-i18n="footer-line">Feito com ordem, precisão e estrutura.</span> © <span id="year"></span></p>
-    <a href="#top" class="footer__top" data-i18n="footer-top">Voltar ao topo ↑</a>
-  </div>
-</footer>
-
-<script src="main.js"></script>
+    <!-- Scripts -->
+    <script src="content.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
