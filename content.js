@@ -67,36 +67,36 @@ const siteContent = {
       en: 'Nelson Ernesto Figueiredo — Software & Data Engineer. Backend with Python, NestJS, data pipelines for banking and insurance.'
     },
     'header-role': {
-      pt: 'Software & Data Engineer · Luanda, Angola',
-      en: 'Software & Data Engineer · Luanda, Angola'
+      pt: 'Software & Data Engineer',
+      en: 'Software & Data Engineer'
     },
     'header-bio': {
-      pt: 'Construo serviços de backend e pipelines de dados com o mesmo rigor com que se lê um esquema: peça a peça, sem deixar nada ao acaso. Foco em soluções estruturadas para banca, seguros e infraestruturas analíticas.',
-      en: 'I build backend services and data pipelines with the same rigour you would read a blueprint: piece by piece, nothing left to chance. Focused on structured solutions for banking, insurance, and analytical infrastructure.'
+      pt: 'Desenvolvo aplicações Web e soluções de Data Warehouse. O meu foco é criar software funcional, testado e escalável , com especial interesse em ecossistemas analíticos e de dados.',
+      en: 'I develop Web applications and Data Warehouse solutions. My focus is on building functional, tested, and scalable software, with a particular interest in analytics and data ecosystems.'
     },
     'now-heading': { pt: 'AGORA', en: 'NOW' },
     'now-lead': {
-      pt: 'Actualmente a aprofundar sistemas de dados e engenharia de software distribuída:',
-      en: 'Currently deepening knowledge in data systems and distributed software engineering:'
+      pt: 'A consolidar conhecimentos em aplicações Web, SQL avançado, pipelines e cloud services.',
+      en: 'Consolidating knowledge in Web applications, advanced SQL, pipelines, and cloud services.'
     },
-    'now-badge-1': { pt: '42 Luanda', en: '42 Luanda' },
-    'now-badge-2': { pt: 'Instrutor de Programação (7 alunos)', en: 'Coding Instructor (7 students)' },
-    'now-badge-3': { pt: 'Roteiro Banca & Seguros', en: 'Banking & Insurance Roadmap' },
+    'now-badge-1': { pt: '42 Advanced', en: '42 Advanced' },
+    'now-badge-2': { pt: 'Instrutor de Programação', en: 'Coding Instructor' },
+    'now-badge-3': { pt: 'DataCamp', en: 'DataCamp' },
     'now-subtext': {
-      pt: 'Estudante na 42 Luanda focado em sistemas, concorrência e backend. Simultaneamente a ensinar lógica de programação a crianças e a desenhar pipelines analíticos.',
-      en: 'Student at 42 Luanda focused on systems, concurrency and backend. Simultaneously teaching programming logic to children and architecting analytical pipelines.'
+      pt: 'Formado pelo método prático e orientado a projetos da 42 Luanda, com foco em arquitetura de sistemas. Simultaneamente, compartilho conhecimento como tutor privado de programação para crianças e exploro o desenvolvimento de soluções e pipelines de dados.',
+      en: 'Graduated from the practical, project-oriented method of 42 Luanda, focusing on system architecture. Simultaneously, I share knowledge as a private coding tutor for children and explore the development of solutions and data pipelines.'
     },
     'prev-exp': {
-      pt: 'Antes disso, frequentei Engenharia Civil no ISPTEC — onde treinei a mente para pensar com rigor e lógica matemática, transformando problemas complexos em soluções estruturadas aplicadas a sistemas de dados.',
-      en: 'Before that, I studied Civil Engineering at ISPTEC — where I trained my mind to think with mathematical rigour and logic, turning complex problems into structured solutions now applied to data systems.'
+      pt: 'Antes disso, frequentei o 5º ano de Engenharia Civil no ISPTEC, onde construi toda minha fundação.',
+      en: 'Before that, I attended the 5th year of Civil Engineering at ISPTEC, where I built my entire foundation.'
     },
 
     /* Projectos em Destaque */
     'recent-projects-heading': { pt: 'PROJECTOS RECENTES', en: 'RECENT PROJECTS' },
     'proj-1-tag': { pt: 'CONCLUÍDO', en: 'ACTIVE' },
     'proj-1-desc': {
-      pt: 'Plataforma para análise e gestão de métricas de estudantes da 42, gerando previsões de desempenho e acompanhamento de resultados.',
-      en: 'Platform for analyzing and managing 42 student performance metrics, generating predictions and tracking progress.'
+      pt: 'Mercado de predição, de eventos dos alunos da 42.',
+      en: 'Prediction market for student events at 42.'
     },
     'proj-1-m1': { pt: 'Modelagem SQL', en: 'SQL Modeling' },
     'proj-1-m2': { pt: 'APIs REST', en: 'REST APIs' },
@@ -105,45 +105,21 @@ const siteContent = {
     'proj-2-tag': { pt: '42 CURRÍCULO', en: '42 CURRICULUM' },
     'proj-2-title': { pt: 'Servidor IRC', en: 'IRC Server' },
     'proj-2-desc': {
-      pt: 'Implementação de servidor de chat conforme as especificações RFC 1459, multiplexagem I/O não bloqueante e múltiplos clientes simultâneos.',
-      en: 'Implementation of an RFC 1459 compliant chat server with non-blocking I/O multiplexing and multiple simultaneous clients.'
+      pt: 'Implementação de servidor de chat conforme as especificações RFC 1459.',
+      en: 'Implementation of a chat server according to RFC 1459 specifications.'
     },
     'proj-2-m1': { pt: 'C++98', en: 'C++98' },
     'proj-2-m2': { pt: 'Sockets TCP/IP', en: 'TCP/IP Sockets' },
     'proj-2-m3': { pt: 'Debugging de Memória', en: 'Memory Debugging' },
 
-    'proj-3-tag': { pt: 'BANCA & RISCO', en: 'BANKING & RISK' },
-    'proj-3-title': { pt: 'Pipeline de Detecção de Fraude', en: 'Fraud Detection Pipeline' },
-    'proj-3-desc': {
-      pt: 'Pipeline de dados que ingere fluxos de transacções simuladas, calcula anomalias estatísticas e emite alertas num dashboard operacional.',
-      en: 'Data pipeline ingesting simulated financial transactions, computing statistical anomalies and raising alerts in an operational dashboard.'
-    },
-    'proj-3-m1': { pt: 'Apache Airflow', en: 'Apache Airflow' },
-    'proj-3-m2': { pt: 'Python / Pandas', en: 'Python / Pandas' },
-    'proj-3-m3': { pt: 'Grafana & PostgreSQL', en: 'Grafana & PostgreSQL' },
-
-    'proj-4-tag': { pt: 'FINTECH', en: 'FINTECH' },
-    'proj-4-title': { pt: 'Motor de Score de Risco de Crédito', en: 'Credit Risk Scoring Engine' },
-    'proj-4-desc': {
-      pt: 'ETL que transforma dados cadastrais e financeiros em variáveis de risco, calcula a probabilidade de crédito e expõe resultados via API.',
-      en: 'ETL pipeline transforming customer and financial data into risk features, calculating credit scores and exposing lookups via real-time API.'
-    },
-    'proj-4-m1': { pt: 'NestJS Backend', en: 'NestJS Backend' },
-    'proj-4-m2': { pt: 'Modelagem de Risco', en: 'Risk Modeling' },
-    'proj-4-m3': { pt: 'Docker Container', en: 'Docker Container' },
+    
 
     /* Projectos Secundários / Roteiro */
-    'sec-1-title': { pt: 'Dashboard de Sinistros de Seguros', en: 'Insurance Claims Dashboard' },
-    'sec-1-desc': { pt: 'Modelação dimensional em estrela (Databricks, Power BI e SQL)', en: 'Dimensional star schema modeling (Databricks, Power BI and SQL)' },
+    'sec-1-title': { pt: 'minishell', en: 'minishell' },
+    'sec-1-desc': { pt: 'Implementação de um shell simples em C', en: 'Implementation of a simple shell in C' },
 
-    'sec-2-title': { pt: 'API de Open Banking (Simulada)', en: 'Open Banking API (Simulated)' },
-    'sec-2-desc': { pt: 'Padrões de segurança, contas, transferências e auditoria bancária', en: 'Security standards, accounts, transfers and financial audit trails' },
-
-    'sec-3-title': { pt: 'Automação de Relatórios Regulatórios', en: 'Regulatory Reporting Automation' },
-    'sec-3-desc': { pt: 'Pipeline agendado para agregação financeira e conformidade com alertas', en: 'Scheduled aggregation pipeline with compliance checks and alerting' },
-
-    'sec-4-title': { pt: 'Data Warehouse de Apólices', en: 'Policy Data Warehouse' },
-    'sec-4-desc': { pt: 'Consultas analíticas rápidas sobre exposição ao risco e carteira', en: 'Fast analytical queries on risk exposure and portfolio performance' },
+    'sec-2-title': { pt: 'cub3d', en: 'cub3d' },
+    'sec-2-desc': { pt: 'Implementação de um jogo 3D em C usando raycasting.a', en: 'Implementation of a 3D game in C using raycasting.' },
 
     'more-github': { pt: 'Mais projectos no GitHub', en: 'More on GitHub' },
 

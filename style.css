@@ -9,8 +9,8 @@
   --navy-800: #0f1823;
   --navy-700: #142a38;
   --navy-600: #1a3a4a;
-  --border: rgba(201, 199, 240, 0.12);
-  --border-soft: rgba(201, 199, 240, 0.07);
+  --border: #c9c7f01f;
+  --border-soft: rgba(201, 199, 240, 0.071);
 
   --accent: #2FA99A;
   --accent-soft: #A3E4D9;
