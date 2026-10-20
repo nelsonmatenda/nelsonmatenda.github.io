@@ -7,52 +7,43 @@ const siteContent = {
   /* ---------- Testemunhos com suporte multilíngue ---------- */
   testimonials: [
     {
-      author: "Manuel Silva",
+      author: "Adilson Jacinto",
       role: {
         pt: "Colega de Software na 42 Luanda",
         en: "Software Peer at 42 Luanda"
       },
-      short: {
-        pt: "Rigor na arquitetura e na escrita de código...",
-        en: "Rigour in architecture and code quality..."
-      },
       quote: {
-        pt: "O Nelson destaca-se pelo rigor na arquitetura e na escrita de código. No desenvolvimento do servidor IRC e projectos de sistemas na 42, a sua atenção aos detalhes e persistência resolveram os problemas mais complexos de concorrência e memória.",
-        en: "Nelson stands out for his rigour in architecture and code quality. During the IRC server development and systems projects at 42, his attention to detail and tenacity solved complex concurrency and memory challenges."
+        pt: "O Nelson demonstrou competência no desenvolvimento do 42Prediction, destacando-se pela capacidade de resolver problemas técnicos e pela atenção à qualidade e organização do código.",
+        en: "Nelson demonstrated competence in developing 42Prediction, standing out for his ability to solve technical problems and his attention to code quality and organization."
       },
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80"
+      img: "/assets/img/adilson.jpg",
+      linkedin: "https://www.linkedin.com/in/adilson-jacinto-94a194184/"
     },
     {
-      author: "Ana Paula Costa",
+      author: "Guilherme dos Santos",
       role: {
-        pt: "Encarregada de Educação · Ensino de Programação",
-        en: "Student Parent · Coding Education"
-      },
-      short: {
-        pt: "Didática e paciência extraordinárias...",
-        en: "Extraordinary patience and pedagogy..."
+        pt: "Colega de Software na 42 Luanda",
+        en: "Software Peer at 42 Luanda"
       },
       quote: {
-        pt: "Como instrutor de programação, o Nelson demonstrou uma didática e paciência extraordinárias. Consegue simplificar a lógica e algoritmos para crianças com um método estruturado que transmite confiança desde a primeira aula.",
-        en: "As a coding instructor, Nelson has demonstrated extraordinary patience and pedagogical skill. He breaks down logic and algorithms for children using a structured method that inspires confidence from day one."
+        pt: "O Nelson revelou profissionalismo, sentido de responsabilidade e capacidade de colaboração. A sua abordagem analítica contribuiu para a resolução de desafios durante o desenvolvimento do 42Prediction.",
+        en: "Nelson demonstrated professionalism, responsibility, and collaborative skills. His analytical approach contributed to overcoming challenges during the development of 42Prediction."
       },
-      img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop&q=80"
+      img: "/assets/img/guilherme.jpg",
+      linkedin: "https://www.linkedin.com/in/gudos-sa/"
     },
     {
-      author: "Carlos Mendes",
+      author: "Marcos Carvalho",
       role: {
-        pt: "Engenheiro de Dados & Backend",
-        en: "Data & Backend Engineer"
-      },
-      short: {
-        pt: "Compromisso com precisão e modelagem sólida...",
-        en: "Commitment to precision and solid modelling..."
+        pt: "Colega de Software na 42 Luanda",
+        en: "Software Peer at 42 Luanda"
       },
       quote: {
-        pt: "Trabalhar com o Nelson em pipelines de dados é ter a certeza de que nada fica ao acaso. O seu compromisso com testes, limpeza e modelagem sólida reflecte a precisão que sectores como banca e seguros exigem.",
-        en: "Collaborating with Nelson on data pipelines means knowing nothing is left to chance. His commitment to testing, clean schemas, and solid modelling reflects the precision demanded by banking and insurance."
+        pt: "O Nelson demonstrou uma boa compreensão da arquitectura de software e das necessidades do produto, evidenciando capacidade de aprendizagem e foco na construção de soluções escaláveis e sustentáveis.",
+        en: "Nelson demonstrated a good understanding of software architecture and product needs, showing a capacity for learning and a focus on building scalable and sustainable solutions."
       },
-      img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&auto=format&fit=crop&q=80"
+      img: "/assets/img/marcos.jpg",
+      linkedin: "#"
     }
   ],
 

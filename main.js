@@ -88,19 +88,24 @@ function renderTestimonial(index) {
   const imgEl = document.getElementById('testimonialAuthorImg');
 
   if (quoteEl && data.quote) quoteEl.textContent = `"${data.quote[currentLang]}"`;
-  if (authorEl) authorEl.textContent = data.author;
+  if (authorEl) {
+    authorEl.textContent = data.author;
+    if (data.linkedin) {
+      authorEl.href = data.linkedin;
+      authorEl.target = '_blank';
+      authorEl.rel = 'noopener noreferrer';
+    } else {
+      authorEl.removeAttribute('href');
+      authorEl.removeAttribute('target');
+      authorEl.removeAttribute('rel');
+    }
+  }
   if (roleEl && data.role) roleEl.textContent = data.role[currentLang];
   if (imgEl && data.img) imgEl.src = data.img;
 
   // Actualiza o estado dos botões da grelha de testemunhos
   for (let i = 0; i < testimonials.length; i++) {
     const btn = document.getElementById(`t-btn-${i}`);
-    const shortTextEl = document.getElementById(`t-short-${i}`);
-    const itemData = testimonials[i];
-
-    if (shortTextEl && itemData && itemData.short) {
-      shortTextEl.textContent = `"${itemData.short[currentLang]}"`;
-    }
 
     if (btn) {
       if (i === index) {
