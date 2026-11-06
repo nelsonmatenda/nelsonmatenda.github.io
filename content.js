@@ -62,8 +62,8 @@ const siteContent = {
       en: 'Software & Data Engineer'
     },
     'header-bio': {
-      pt: 'Desenvolvo aplicações Web e soluções de Data Warehouse. O meu foco é criar software funcional, testado e escalável , com especial interesse em ecossistemas analíticos e de dados.',
-      en: 'I develop Web applications and Data Warehouse solutions. My focus is on building functional, tested, and scalable software, with a particular interest in analytics and data ecosystems.'
+      pt: 'Engenheiro com forte base analítica e especialização em Arquitetura de Software pela 42 Luanda. Desenvolvo aplicações web escaláveis, sistemas distribuídos e pipelines de dados.',
+      en: 'Software & Data Engineer with a strong analytical foundation and specialization in Software Architecture from 42 Luanda. I develop scalable web applications, distributed systems, and data pipelines.'
     },
     'now-heading': { pt: 'AGORA', en: 'NOW' },
     'now-lead': {
@@ -86,8 +86,8 @@ const siteContent = {
     'recent-projects-heading': { pt: 'PROJECTOS RECENTES', en: 'RECENT PROJECTS' },
     'proj-1-tag': { pt: 'CONCLUÍDO', en: 'ACTIVE' },
     'proj-1-desc': {
-      pt: 'Mercado de predição, de eventos dos alunos da 42.',
-      en: 'Prediction market for student events at 42.'
+      pt: 'Plataforma web de mercados preditivos em tempo real. Desenvolvida com Node.js, PostgreSQL, WebSockets e Nginx.',
+      en: 'Real-time prediction market platform. Built with Node.js, PostgreSQL, WebSockets, and Nginx.'
     },
     'proj-1-m1': { pt: 'Modelagem SQL', en: 'SQL Modeling' },
     'proj-1-m2': { pt: 'APIs REST', en: 'REST APIs' },
@@ -107,7 +107,7 @@ const siteContent = {
 
     /* Projectos Secundários / Roteiro */
     'sec-1-title': { pt: 'minishell', en: 'minishell' },
-    'sec-1-desc': { pt: 'Implementação de um shell simples em C', en: 'Implementation of a simple shell in C' },
+    'sec-1-desc': { pt: 'Desenvolvimento de interpretador de comandos em C com gestão de memória, parsing e processos POSIX.', en: 'Development of a command interpreter in C with memory management, parsing, and POSIX processes.' },
 
     'sec-2-title': { pt: 'cub3d', en: 'cub3d' },
     'sec-2-desc': { pt: 'Implementação de um jogo 3D em C usando raycasting.a', en: 'Implementation of a 3D game in C using raycasting.' },
